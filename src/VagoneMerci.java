@@ -36,4 +36,9 @@ public class VagoneMerci extends Vagone{
     public String toString() {
         return super.toString() + ", caricoMassimo=" + caricoMassimo + ", caricoAttuale=" + caricoAttuale;
     }
+
+    @Override
+    public double pesoVagone() {
+        return this.getCaricoAttuale() + this.getPesoVuoto();
+    }
 }

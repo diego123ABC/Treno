@@ -37,4 +37,9 @@ public class VagonePasseggeri extends Vagone{
     public String toString() {
         return super.toString() + ", massimoPasseggeri=" + massimoPasseggeri + ", numPasseggeri=" + numPasseggeri;
     }
+
+    @Override
+    public double pesoVagone() {
+        return this.getPesoVuoto() + this.getNumPasseggeri() * 0.07;
+    }
 }

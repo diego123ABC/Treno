@@ -43,4 +43,6 @@ public abstract class Vagone {
     public String toString() {
         return getClass().getName() + ", matricola=" + matricola + ", lunghezza=" + lunghezza + ", pesoVuoto=" + pesoVuoto;
     }
+
+    public abstract double pesoVagone();
 }

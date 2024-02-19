@@ -41,12 +41,7 @@ public class Treno {
       public double pesoTreno(){
         double peso = 0;
         for (Vagone v : treno){
-            if(v instanceof VagoneMerci){
-                peso+=((VagoneMerci)v).getCaricoAttuale() + v.getPesoVuoto();
-            }else{
-                VagonePasseggeri v1 = (VagonePasseggeri) v;
-                peso+=v1.getPesoVuoto() + v1.getNumPasseggeri() * 0.07;
-            }
+            peso+=v.pesoVagone();
         }
         return peso;
       }
